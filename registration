@@ -1,0 +1,122 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+ 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Registration Form Validation</title> 
+  <style> 
+    body { 
+      font-family: Arial, sans-serif; 
+      margin: 20px; 
+    } 
+ 
+    label { 
+      display: block; 
+      margin-bottom: 8px; 
+    } 
+ 
+    input { 
+      width: 100%; 
+      padding: 8px; 
+      margin-bottom: 16px; 
+    } 
+ 
+    button { 
+      padding: 10px; 
+      background-color: #4CAF50; 
+      color: white; 
+      border: none; 
+      cursor: pointer; 
+    } 
+ 
+    button:hover { 
+      background-color: #45a049; 
+    } 
+ 
+    .error { 
+      color: red; 
+      margin-top: 5px; 
+    } 
+  </style> 
+</head> 
+ 
+<body> 
+ 
+  <h2>Registration Form</h2> 
+ 
+  <form id="registrationForm"> 
+    <label for="username">Username:</label> 
+    <input type="text" id="username" name="username"> 
+ 
+    <label for="email">Email:</label> 
+    <input type="email" id="email" name="email"> 
+ 
+    <label for="password">Password:</label> 
+    <input type="password" id="password" name="password"> 
+ 
+    <div class="error" id="usernameError"></div> 
+    <div class="error" id="emailError"></div> 
+    <div class="error" id="passwordError"></div> 
+ 
+    <button type="button" onclick="validateForm()">Register</button> 
+  </form> 
+ 
+  <script> 
+    function validateForm() { 
+      // Reset errors 
+      document.getElementById("usernameError").innerHTML = ""; 
+      document.getElementById("emailError").innerHTML = ""; 
+      document.getElementById("passwordError").innerHTML = ""; 
+ 
+      // Get form values 
+      var username = document.getElementById("username").value.trim(); 
+      var email = document.getElementById("email").value.trim(); 
+      var password = document.getElementById("password").value.trim(); 
+ 
+      // Validation checks 
+      if (username === "") { 
+        document.getElementById("usernameError").innerHTML = "Username is required"; 
+      } 
+ 
+      if (email === "") { 
+        document.getElementById("emailError").innerHTML = "Email is required"; 
+      } else if (!isValidEmail(email)) { 
+        document.getElementById("emailError").innerHTML = "Invalid email format"; 
+      } 
+ 
+      if (password === "") { 
+        document.getElementById("passwordError").innerHTML = "Password is required"; 
+      } else if (password.length < 6) { 
+        document.getElementById("passwordError").innerHTML = "Password must be at least 6 
+characters"; 
+      } 
+ 
+      // Additional validation checks can be added 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+      // If all checks pass, the form is considered valid 
+      if (username !== "" && email !== "" && isValidEmail(email) && password !== "" && 
+password.length >= 6) { 
+        alert("Registration successful!"); 
+        // You can submit the form or perform other actions here 
+      } 
+    } 
+ 
+    function isValidEmail(email) { 
+      // Basic email format validation 
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+      return emailRegex.test(email); 
+    } 
+  </script> 
+ 
+</body> 
+ 
+</html>
