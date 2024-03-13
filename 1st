@@ -1,0 +1,75 @@
+<!-- UNORDERED LIST -->
+<html> 
+<head> 
+<title> Creating Unorder List </title> 
+</head> 
+<body bgcolor=”pink”> 
+<h1 align=”center”> Creating Unorder List</h1> 
+<h1 align=”center”>List of Colleges in Karnataka</h1> 
+<ul type=”square”> 
+<li>CIT Gubbi</li> 
+<li>SIT Tumkur</li> 
+<li>NITTE MEENAKSHI Banglore</li> 
+</ul> 
+</body> 
+</html>
+
+<!--ORDERED LIST -->
+<html> 
+<head> 
+<title> Creating Order List </title> 
+</head> 
+<body bgcolor=”pink”> 
+<h1 align=”center”> Creating Order List</h1> 
+<h1 align=”center”>List of branches in CIT GUBBI</h1> 
+<ol type=”A”> 
+<li>CSE</li> 
+<li>ISE</li> 
+<li>ECE</li> 
+<li>EEE</li> 
+<li>CIVIL</li> 
+<li>ME</li> 
+<li>AIDS</li> 
+</ol> 
+</body> 
+</html> 
+
+<!--DEFINITION LIST -->
+<html> 
+<head> 
+<title>Creating Definition List</title> 
+</head> 
+<body bgcolor=”pink”> 
+<h1 align=”center”>Definition List</h1> 
+<dl> 
+<dt>CSE<dd>Computer Science & Engineering 
+<dt>ECE<dd>Electronics & Communication Engineering 
+<dt>IT<dd>Information Technology 
+<dt>EEE<dd>Electrical & Electronics Engineering 
+<dt>CE<dd>Civil Engineering
+</dl> 
+</body> 
+</html>
+
+<!--NESTED LIST -->
+<html> 
+<head> 
+<title>Nested Lists</title> 
+</head> 
+<body bgcolor=”pink”> 
+<h1 align=”center”>List of Colleges in Karnataka</h1> 
+<ol> 
+<li>Karnataka</li> 
+<ul> 
+<li>CIT Gubbi</li> 
+<li>SIT Tumkur</li> 
+<li>SSIT Tumkur</li> 
+</ul> 
+<li>Bangalore</li> 
+<ul> 
+<li>BMS</li> 
+<li>NITTE</li> 
+</ul> 
+</ol> 
+</body> 
+</html> 
